@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.item:nth-child(1) {
+  width: 100%;
+  height: 5%;
+  background-color: aqua;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.item:nth-child(3) {
+  width: 100%;
+  height: 5%;
+  background-color: aqua;
+}
+
+.item:nth-child(2) {
+  flex-grow: 1;
+  height: 75%;
+  background-color: blueviolet;
+}
