@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  align-content: start;
+}
+.project {
+  flex-grow: 1;
+  height: 75%;
+  background-color: blueviolet;
+}
