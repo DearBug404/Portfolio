@@ -1,3 +1,21 @@
-<div class="container">
-<div class="header">Header</div>
+<div class="header">
+  <div class="logo">MyLogo</div>
+
+  <div class="hamburger" (click)="menuOpen = !menuOpen">
+    {{ menuOpen ? '✖' : '☰' }}
+  </div>
+
+  <div class="nav-links" [ngClass]="{ 'show': menuOpen }">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#resume">RESUME</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
+
+    <ng-container *ngIf="!menuOpen">
+    <span class="separator">|</span>
+    <span class="number"><i class="fas fa-phone-alt fa-flip-horizontal"></i> +92 346 988608</span>
+    </ng-container>
+    
+  </div>
 </div>
