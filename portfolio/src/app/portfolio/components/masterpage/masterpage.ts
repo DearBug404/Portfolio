@@ -6,10 +6,11 @@ import { Projects } from '../projects/projects';
 import { Skills } from '../skills/skills';
 import { Footer } from '../footer/footer';
 import { Mainintro } from "../mainintro/mainintro";
+import { Services } from "../services/services/services";
 
 @Component({
   selector: 'app-masterpage',
-  imports: [Header, Mainintro, About, Skills, Projects, Contact, Footer],
+  imports: [Header, Mainintro, About, Services, Skills, Projects, Contact, Footer, Services],
   templateUrl: './masterpage.html',
   styleUrl: './masterpage.css'
 })
