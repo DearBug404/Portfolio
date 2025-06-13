@@ -1,17 +1,17 @@
 /* Container */
 .container {
   width: 100vw;
+  min-height: 100vh; /* So there's vertical space to center */
   margin: 0 auto;
   padding: 40px 20px;
   background-color: rgba(22, 22, 22, 0.658);
   box-sizing: border-box;
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
+
 
 /* Heading */
 .about-text {
@@ -63,14 +63,14 @@
   content: '';
   position: absolute;
   top: 1.5px;
-  width: 120px;          /* thin part length */
-  height: .5px;          /* thin line thickness */
+  width: 120px;          
+  height: .5px;         
   background-color: #0ff;
   border-radius: 2px;
 }
 
 .custom-line::before {
-  left: -10px;          /* adjust based on width */
+  left: -10px;         
 }
 
 .custom-line::after {
@@ -82,18 +82,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 50px;
-  padding-left: 10px;
+  justify-content: center; 
+  gap: 30px;
+  padding-top: 20px;
   max-width: 1200px;
   width: 100%;
 }
+
 /* Image styling */
 .about-image img {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   object-fit: cover;
   transition: transform 0.3s ease;
   display: flex;
+  padding-top: 20px;
  
 }
 .about-image img:hover {
@@ -105,34 +108,39 @@
 .about-detail {
   color: #fff;
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter';
 }
 
 .about-heading h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #29bd5d; /* highlight name with your theme color */
+  color: #fff; /* highlight name with your theme color */
 }
 
 .about-heading p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #ccc;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  color: #29bd5d;
   margin-bottom: 20px;
 }
 
 .about-paragraph pre {
-  width: 50%;
-  font-size: 12px;
-  line-height: 1.5;
+  width: 100%;
+  max-width: 80%;
+  font-size: 16px;
+  line-height: 26px;
   color: #fff;
   white-space: pre-wrap;
   word-break: break-word;
-  font-family: inherit;
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
 }
 .about-list {
-  font-family: 'Inter';
-  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
   color: #fff !important;
 }
 
@@ -188,30 +196,68 @@
   margin-right: 8px;
 }
 
-
-
-
-/* Responsive layout for larger screens */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .about {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+     margin-bottom: 10px;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: auto;
+  }
+
+  .about-detail {
+    padding: 10px;
+    text-align: left;  
+    width: 100%;
+    max-width: 600px;
+  }
+  .about-text h1 {
+  font-size: 1.5rem;
+}
+
+.about-text::after {
+  font-size: 3rem;
+}
+  .about-paragraph pre {
+    font-size: 14px; 
+    line-height: 1.4;
+  }
+
+  .detail-buttons {
+    padding-left: 0;
+    justify-content: center;  
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .detail-buttons .btn {
+    width: auto;                
+    padding: 8px 20px;         
+    font-size: 14px;           
+    text-align: center;
     justify-content: center;
-    gap: 10px; /* add controlled spacing */
-  }
-
-  .about-image,
-  .about-detail {
-    flex: unset;
-    
-  }
-
-  .about-image {
-    padding-left: 50px;
-  }
-
-  .about-detail {
-    padding-right: 100px;
   }
 }
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .about-text::after {
+    font-size: 2rem;
+  }
+
+  .about-paragraph pre {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
 
