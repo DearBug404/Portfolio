@@ -1,3 +1,25 @@
 <div class="container">
-<div class="skill">Skill</div>
+    <div class="skills-text">
+        <h1>SKILLS</h1>
+    </div>
+    <div class="custom-line"></div>
+
+    <div class="skills">
+        <div class="skills-box">
+            <h3>All the skills that I have in that field of work are mentioned.</h3>
+            <p>End-to-end development using .NET Core for the backend and Angular for dynamic, modern frontends.</p>
+        </div>
+        <div class="skills-box">
+            <div *ngFor="let skill of skills" class="skill-bar">
+                <div class="skill-header">
+                    <span>{{ skill.name }}</span>
+                    <span>{{ skill.percent }}%</span>
+                </div>
+                <div class="range-line">
+                    <div class="inner-line" [style.width.%]="skill.percent"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
