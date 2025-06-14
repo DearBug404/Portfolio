@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="resume-text">
+        <h1>RESUME</h1>
+    </div>
+    <div class="custom-line"></div>
+
+    <div class="resume">
+        <div class="experience-box">
+            <h3>
+                <i class="fa fa-briefcase"></i> Experience
+            </h3>
+            <div *ngFor="let exp of experiences" class="experience-item timeline-entry">
+                <div class="timeline-circle"></div>
+                <div class="timeline-content">
+                    <h4>{{ exp.title }}</h4>
+                    <small>{{ exp.duration }}</small><br>
+                    <strong>{{ exp.company }}</strong>
+                    <p>{{ exp.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="education-box">
+            <h3>
+                <i class="fa fa-graduation-cap"></i> Education
+            </h3>
+            <div *ngFor="let exp of experiences" class="education-item timeline-entry">
+                <div class="timeline-circle"></div>
+                <div class="timeline-content">
+                    <h4>{{ exp.title }}</h4>
+                    <small>{{ exp.duration }}</small><br>
+                    <strong>{{ exp.company }}</strong>
+                    <p>{{ exp.description }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

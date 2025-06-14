@@ -1,0 +1,325 @@
+.container {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(10, 10, 10, 0.8);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-text {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.resume-text h1 {
+  font-family: 'Inter';
+  font-size: 1.8rem;
+  color: #29bd5d;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -50px;
+}
+
+.resume-text::after {
+  font-family: 'Inter';
+  font-weight: bold;
+  content: 'RESUME';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: rgba(41, 189, 93, 0.05);
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  line-height: 1;
+  margin-top: 30px;
+}
+
+.custom-line {
+  position: relative;
+  width: 60px;
+  height: 3.5px;
+  background-color: #0ff;
+  border-radius: 10px;
+  margin: 1px auto;
+}
+
+.custom-line::before,
+.custom-line::after {
+  content: '';
+  position: absolute;
+  top: 1.5px;
+  width: 120px;
+  height: .5px;
+  background-color: #0ff;
+  border-radius: 2px;
+}
+
+.custom-line::before {
+  left: -10px;
+}
+
+.custom-line::after {
+  right: -10px;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+  color: #eee;
+}
+
+.experience-box {
+  flex: 1;
+  padding: 20px;
+}
+
+.experience-box h3 {
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 43px;
+  color: rgba(253, 254, 255);
+
+}
+
+.experience-box p {
+  font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(169, 173, 184);
+}
+.experience-item {
+  margin-bottom: 20px;
+}
+.experience-item h4 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #29bd5d;
+  margin-bottom: 10px;
+}
+.experience-item small {
+  font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  color: rgb(169, 173, 184);
+}
+.experience-item strong {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgb(253, 254, 255);
+  display: block;
+  margin: 20px 0;
+}
+
+/* Education */
+.education-box {
+  flex: 1;
+  padding: 20px;
+}
+
+.education-box h3 {
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 43px;
+  color: rgba(253, 254, 255);
+}
+
+
+.education-box p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(169, 173, 184);
+ 
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.education-item h4 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #29bd5d;
+  margin-bottom: 10px;
+}
+
+.education-item small {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  color: rgb(169, 173, 184);
+}
+
+.education-item strong {
+  font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgb(253, 254, 255);
+  display: block;
+  margin: 20px 0;
+}
+
+/* Side line */
+h3 i {
+  margin-right: 10px;
+  color: #4d4d4d6c;
+}
+
+.timeline-entry {
+  position: relative;
+  padding-left: 40px;
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+
+/* This creates the vertical line that starts from the circle */
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: 5.5px;
+  top: 11px;
+  bottom: -30px;
+  width: 0.5px;
+  background-color: #4d4d4d6c;
+  z-index: 0;
+}
+
+.timeline-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #4d4d4d6c;
+  background-color: #6363632a;
+  z-index: 1;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-entry:hover .timeline-circle {
+  background-color: #29bd5d;
+  border-color: #29bd5d;
+}
+/* ------------------ RESPONSIVE MEDIA QUERIES ------------------ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .resume {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .resume-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .resume-text::after {
+    font-size: 3.5rem;
+  }
+
+  .experience-box h3,
+  .education-box h3 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .experience-item h4,
+  .education-item h4 {
+    font-size: 20px;
+  }
+
+  .experience-item small,
+  .education-item small {
+    font-size: 16px;
+  }
+
+  .experience-item strong,
+  .education-item strong {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .resume-text::after {
+    font-size: 2.5rem;
+  }
+
+  .custom-line::before,
+  .custom-line::after {
+    width: 60px;
+  }
+
+  .resume {
+    gap: 15px;
+  }
+
+  .experience-box,
+  .education-box {
+    padding: 10px 0;
+  }
+
+  .experience-box h3,
+  .education-box h3 {
+    font-size: 24px;
+  }
+
+  .experience-item h4,
+  .education-item h4 {
+    font-size: 18px;
+  }
+
+  .experience-item strong,
+  .education-item strong {
+    font-size: 16px;
+  }
+
+  h3 i {
+    margin-right: 6px;
+  }
+}
