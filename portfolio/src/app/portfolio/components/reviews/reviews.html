@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="reviews-text">
+    <h1>REVIEWS</h1>
+  </div>
+  <div class="custom-line"></div>
+  <div class="reviews-wrapper">
+    <button class="arrow left" (click)="prevSlide()">&#8249;</button>
+    <div class="reviews-track-wrapper">
+      <div class="reviews-track">
+        <div class="review-block" *ngFor="let review of reviewsList">
+          <div class="review-card">
+            <p class="review-text">{{ review.text }}</p>
+          </div>
+          <div class="client-info">
+            <img [src]="review.image" alt="client" (error)="onImageError($event)" />
+            <div>
+              <h4>{{ review.name }}</h4>
+              <span>{{ review.designation }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="arrow right" (click)="nextSlide()">&#8250;</button>
+  </div>
+</div>

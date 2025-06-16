@@ -7,10 +7,11 @@ import { Footer } from '../footer/footer';
 import { Mainintro } from "../mainintro/mainintro";
 import { Services } from '../services/services';
 import { Resume } from "../resume/resume";
+import { Reviews } from "../reviews/reviews";
 
 @Component({
   selector: 'app-masterpage',
-  imports: [Header, Mainintro, About, Services, Skills, Contact, Footer, Resume],
+  imports: [Header, Mainintro, About, Services, Skills, Contact, Footer, Resume, Reviews],
   templateUrl: './masterpage.html',
   styleUrl: './masterpage.css'
 })

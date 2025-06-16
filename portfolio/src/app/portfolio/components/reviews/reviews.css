@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  padding: 40px 20px;
+  background-color: rgba(22, 22, 22, 0.658);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-text {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reviews-text h1 {
+  font-family: 'Inter';
+  font-size: 1.8rem;
+  color: #29bd5d;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -50px;
+}
+
+.reviews-text::after {
+  font-family: 'Inter';
+  font-weight: bold;
+  content: 'REVIEWS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: rgba(41, 189, 93, 0.05);
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  line-height: 1;
+  margin-top: 30px;
+}
+
+.custom-line {
+  position: relative;
+  width: 60px;
+  height: 3.5px;
+  background-color: #0ff;
+  border-radius: 10px;
+  margin: 1px auto;
+}
+
+.custom-line::before, .custom-line::after {
+  content: '';
+  position: absolute;
+  top: 1.5px;
+  width: 120px;
+  height: .5px;
+  background-color: #0ff;
+  border-radius: 2px;
+}
+
+.custom-line::before {
+  left: -10px;
+}
+
+.custom-line::after {
+  right: -10px;
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #29bd5d;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.arrow:hover {
+  color: #fff;
+}
+
+.reviews-track-wrapper {
+  overflow: hidden;
+  flex: 1;
+  outline: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.reviews-wrapper:hover .reviews-track-wrapper {
+  outline: none;
+  box-shadow: 0 0 12px rgba(65, 201, 113, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.review-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.review-card {
+  background-color: rgba(40, 40, 40, 0.1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px;
+  color: #eee;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.review-card p{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgb(169, 173, 184);
+  text-align: center;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.client-info img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(54, 54, 54, 0.5);
+}
+
+.client-info h4 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgb(253, 254, 255);
+  text-align: center;
+  transition: color 0.3 ease;
+}
+
+.reviews-wrapper:hover .client-info h4 {
+  color: #29bd5d;
+}
+
+.client-info span {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: rgb(169, 173, 184);
+  text-align: center;
+}
+
+/* ===================== */
+/* 📱 Small Devices (Phones) */
+/* ===================== */
+@media (max-width: 600px) {
+  .reviews-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .reviews-text::after {
+    font-size: 3rem;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+
+  .review-text {
+    font-size: 16px;
+  }
+
+  .client-info img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .client-info h4 {
+    font-size: 18px;
+  }
+
+  .client-info span {
+    font-size: 14px;
+  }
+}
+
+/* ========================= */
+/* 📱 Medium Devices (Tablets) */
+/* ========================= */
+@media (min-width: 601px) and (max-width: 992px) {
+  .reviews-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .reviews-text::after {
+    font-size: 4rem;
+  }
+
+  .arrow {
+    font-size: 1.8rem;
+  }
+
+  .client-info h4 {
+    font-size: 19px;
+  }
+
+  .client-info span {
+    font-size: 15px;
+  }
+}
+
+/* ============================= */
+/* 🖥️ Large Screens Adjustments */
+/* ============================= */
+@media (min-width: 1200px) {
+  .reviews-text h1 {
+    font-size: 2rem;
+  }
+
+  .reviews-text::after {
+    font-size: 6rem;
+  }
+
+  .review-text {
+    font-size: 22px;
+  }
+
+  .client-info h4 {
+    font-size: 22px;
+  }
+}
