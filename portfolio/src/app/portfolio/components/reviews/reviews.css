@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 .reviews-text {
@@ -78,6 +79,7 @@
   max-width: 900px;
   gap: 10px;
   margin-top: 50px;
+  
 }
 
 .arrow {
@@ -194,6 +196,15 @@
   .reviews-text::after {
     font-size: 3rem;
   }
+  .custom-line {
+    width: 40px;
+    margin-top: -10px;
+  }
+
+  .custom-line::before,
+  .custom-line::after {
+    width: 80px;
+  }
 
   .arrow {
     font-size: 1.5rem;
@@ -229,6 +240,15 @@
   .reviews-text h1 {
     font-size: 1.6rem;
   }
+  .custom-line {
+    width: 40px;
+    margin-top: -30px;
+  }
+
+  .custom-line::before,
+  .custom-line::after {
+    width: 80px;
+  }
 
   .reviews-text::after {
     font-size: 4rem;
@@ -253,6 +273,15 @@
 @media (min-width: 1200px) {
   .reviews-text h1 {
     font-size: 2rem;
+  }
+  .custom-line {
+    width: 40px;
+    margin-top: -30px;
+  }
+
+  .custom-line::before,
+  .custom-line::after {
+    width: 80px;
   }
 
   .reviews-text::after {
