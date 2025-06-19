@@ -1,7 +1,6 @@
-/* Container */
 .container {
   width: 100vw;
-  min-height: 100vh; /* So there's vertical space to center */
+  min-height: 100vh;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: rgba(22, 22, 22, 0.658);
@@ -12,15 +11,12 @@
   align-items: center;
 }
 
-
-/* Heading */
 .about-text {
   position: relative;
-  text-align: center; 
-  margin-bottom: 60px; /* give extra space to fit both texts */
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-/* Small visible heading */
 .about-text h1 {
   font-family: 'Inter';
   font-size: 1.8rem;
@@ -30,15 +26,14 @@
   margin-bottom: -50px;
 }
 
-/* Big faded background text directly under h1 */
 .about-text::after {
   font-family: 'Inter';
   font-weight: bold;
   content: 'ABOUT ME';
   position: absolute;
-  top: 50%; /* align to middle of .about-text */
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* center it nicely */
+  transform: translate(-50%, -50%);
   font-size: 5rem;
   color: rgba(41, 189, 93, 0.05);
   z-index: 1;
@@ -48,216 +43,211 @@
   margin-top: 30px;
 }
 
-
 .custom-line {
   position: relative;
-  width: 60px;         /* adjust as needed */
-  height: 3.5px;         /* thick center */
-  background-color: #0ff;
-  border-radius: 10px;  /* rounded ends */
-  margin: 1px auto;    /* center it */
-}
-
-.custom-line::before,
-.custom-line::after {
-  content: '';
-  position: absolute;
-  top: 1.5px;
-  width: 120px;          
-  height: .5px;         
-  background-color: #0ff;
-  border-radius: 2px;
-}
-
-.custom-line::before {
-  left: -10px;         
-}
-
-.custom-line::after {
-  right: -10px;
-}
-
-/* About layout */
-.about {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; 
-  gap: 30px;
-  padding-top: 20px;
-  max-width: 1200px;
-  width: 100%;
-}
-
-/* Image styling */
-.about-image img {
-  width: 400px;
-  height: 500px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  display: flex;
-  padding-top: 20px;
- 
-}
-.about-image img:hover {
-  transform: scale(1.05);
-}
-
-
-/* About detail placeholder */
-.about-detail {
-  color: #fff;
-  padding: 20px;
-  font-family: 'Inter';
-}
-
-.about-heading h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #fff; /* highlight name with your theme color */
-}
-
-.about-heading p {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 29px;
-  color: #29bd5d;
-  margin-bottom: 20px;
-}
-
-.about-paragraph pre {
-  width: 100%;
-  max-width: 80%;
-  font-size: 16px;
-  line-height: 26px;
-  color: #fff;
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-family: 'Inter',sans-serif;
-  font-weight: 400;
-}
-.about-list {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 26px;
-  font-size: 16px;
-  color: #fff !important;
-}
-
-.about-item {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-  align-items: flex-start;
-}
-
-.about-item dt {
-  min-width: 120px;
-  font-weight: 100;
-}
-
-.about-item dd {
-  margin: 0;
-  display: flex;
-  gap: 20px; /* Adds space between ':' and value */
- 
-}
-.about-item span{
-  font-weight: 100;
-  
-}
-
-.detail-buttons {
-  margin-top: 20px;
-  padding-left: 70px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.detail-buttons .btn {
-  padding: 10px 30px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  transition: background 0.3s, color 0.8s;
-}
-
-.resume-btn {
+  width: 80px !important;
+  height: 3.5px;
   background-color: #29bd5d;
-  color: #fff;
-}
-.resume-btn:hover {
-  background-color: #0ff;
-  color: #000;
-}
-.resume-btn i {
-  margin-right: 8px;
+  border-radius: 10px;
+  margin: 1px auto;
 }
 
-@media (max-width: 768px) {
+  .custom-line::before,
+  .custom-line::after {
+    content: '';
+    position: absolute;
+    top: 1.5px;
+    width: 130px !important;
+    height: .5px;
+    background-color: #29bd5d;
+    border-radius: 2px;
+  }
+
+  .custom-line::before {
+    left: -10px;
+  }
+
+  .custom-line::after {
+    right: -10px;
+  }
+
   .about {
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+    max-width: 1200px;
+    width: 100%;
   }
 
   .about-image img {
-    width: 250px;
-    height: auto;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .about-image img:hover {
+    transform: scale(1.05);
   }
 
   .about-detail {
-    padding: 10px;
-    text-align: left;  
-    width: 100%;
-    max-width: 600px;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Inter';
   }
-  .about-text h1 {
-  font-size: 1.5rem;
-}
 
-.about-text::after {
-  font-size: 3rem;
-}
+  .about-heading h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .about-heading p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    color: #29bd5d;
+    margin-bottom: 20px;
+  }
+
   .about-paragraph pre {
-    font-size: 14px; 
-    line-height: 1.4;
+    width: 100%;
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  .about-list {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    color: #fff !important;
+  }
+
+  .about-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+
+  .about-item dt {
+    min-width: 120px;
+    font-weight: 100;
+  }
+
+  .about-item dd {
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .about-item span {
+    font-weight: 100;
   }
 
   .detail-buttons {
-    padding-left: 0;
-    justify-content: center;  
+    margin-top: 20px;
+    padding-left: 70px;
     display: flex;
+    gap: 15px;
     flex-wrap: wrap;
   }
 
   .detail-buttons .btn {
-    width: auto;                
-    padding: 8px 20px;         
-    font-size: 14px;           
-    text-align: center;
-    justify-content: center;
-  }
-}
-@media (max-width: 480px) {
-  .about-text h1 {
-    font-size: 1.2rem;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s, color 0.8s;
   }
 
-  .about-text::after {
-    font-size: 2rem;
+  .resume-btn {
+    background-color: #29bd5d;
+    color: #fff;
   }
 
-  .about-paragraph pre {
-    font-size: 12px;
+  .resume-btn:hover {
+    background-color: #fff;
+    color: #000;
   }
-}
 
+  .resume-btn i {
+    margin-right: 8px;
+  }
 
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
+    .about-image img {
+      width: 250px;
+      height: auto;
+    }
 
+    .about-detail {
+      padding: 10px;
+      text-align: left;
+      width: 100%;
+      max-width: 600px;
+    }
 
+    .about-text h1 {
+      font-size: 1.5rem;
+    }
 
+    .about-text::after {
+      font-size: 3rem;
+    }
+
+    .about-paragraph pre {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .detail-buttons {
+      padding-left: 0;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .detail-buttons .btn {
+      width: auto;
+      padding: 8px 20px;
+      font-size: 14px;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-text h1 {
+      font-size: 1.2rem;
+    }
+
+    .about-text::after {
+      font-size: 2rem;
+    }
+
+    .about-paragraph pre {
+      font-size: 12px;
+    }
+  }

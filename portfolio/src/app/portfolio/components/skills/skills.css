@@ -45,9 +45,9 @@
 
 .custom-line {
   position: relative;
-  width: 60px;
+  width: 80px !important;
   height: 3.5px;
-  background-color: #0ff;
+  background-color: #29bd5d;
   border-radius: 10px;
   margin: 1px auto;
 }
@@ -57,9 +57,9 @@
   content: '';
   position: absolute;
   top: 1.5px;
-  width: 120px;
+  width: 130px !important;
   height: .5px;
-  background-color: #0ff;
+  background-color: #29bd5d;
   border-radius: 2px;
 }
 

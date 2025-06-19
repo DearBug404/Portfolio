@@ -15,7 +15,7 @@
 .reviews-text {
   position: relative;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .reviews-text h1 {
@@ -46,20 +46,21 @@
 
 .custom-line {
   position: relative;
-  width: 60px;
+  width: 80px !important;
   height: 3.5px;
-  background-color: #0ff;
+  background-color: #29bd5d;
   border-radius: 10px;
   margin: 1px auto;
 }
 
-.custom-line::before, .custom-line::after {
+.custom-line::before,
+.custom-line::after {
   content: '';
   position: absolute;
   top: 1.5px;
-  width: 120px;
+  width: 130px !important;
   height: .5px;
-  background-color: #0ff;
+  background-color: #29bd5d;
   border-radius: 2px;
 }
 
@@ -78,8 +79,7 @@
   width: 100%;
   max-width: 900px;
   gap: 10px;
-  margin-top: 50px;
-  
+  margin-top: 80px;
 }
 
 .arrow {
@@ -98,13 +98,13 @@
 .reviews-track-wrapper {
   overflow: hidden;
   flex: 1;
-  outline: 1px solid rgba(0, 255, 255, 0.1);
+  outline: 1px solid #44444450;
   border-radius: 10px;
 }
 
 .reviews-wrapper:hover .reviews-track-wrapper {
   outline: none;
-  box-shadow: 0 0 12px rgba(65, 201, 113, 0.5);
+  box-shadow: 0 0 12px rgba(65, 201, 113, 0.144);
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -131,7 +131,8 @@
   width: 100%;
   margin-bottom: 15px;
 }
-.review-card p{
+
+.review-card p {
   margin: 0;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -185,9 +186,6 @@
   text-align: center;
 }
 
-/* ===================== */
-/* 📱 Small Devices (Phones) */
-/* ===================== */
 @media (max-width: 600px) {
   .reviews-text h1 {
     font-size: 1.5rem;
@@ -196,6 +194,7 @@
   .reviews-text::after {
     font-size: 3rem;
   }
+
   .custom-line {
     width: 40px;
     margin-top: -10px;
@@ -233,13 +232,11 @@
   }
 }
 
-/* ========================= */
-/* 📱 Medium Devices (Tablets) */
-/* ========================= */
 @media (min-width: 601px) and (max-width: 992px) {
   .reviews-text h1 {
     font-size: 1.6rem;
   }
+
   .custom-line {
     width: 40px;
     margin-top: -30px;
@@ -267,13 +264,11 @@
   }
 }
 
-/* ============================= */
-/* 🖥️ Large Screens Adjustments */
-/* ============================= */
 @media (min-width: 1200px) {
   .reviews-text h1 {
     font-size: 2rem;
   }
+
   .custom-line {
     width: 40px;
     margin-top: -30px;

@@ -3,40 +3,30 @@
         <h1>CONTACT ME</h1>
     </div>
     <div class="custom-line"></div>
-
-    <!-- Contact Row -->
     <div class="contact-row">
-        <!-- Contact Form Box -->
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-box">
             <h3>Say Hello</h3>
             <div class="user-info">
-                <input formControlName="name" type="text" placeholder="Your Name" />
-                <app-validation-error [control]="contactForm.get('name')!"
-                    [submitted]="submitted"></app-validation-error>
+                <input formControlName="name" id="name" name="name" autocomplete="additional-name" type="text" placeholder="Your Name" />
+                <app-validation-error [control]="contactForm.get('name')!" [submitted]="submitted"></app-validation-error>
 
-                <input formControlName="email" type="email" placeholder="Your Email" />
-                <app-validation-error [control]="contactForm.get('email')!"
-                    [submitted]="submitted"></app-validation-error>
+                <input formControlName="email" id="email" name="email" autocomplete="email" type="email" placeholder="Your Email" />
+                <app-validation-error [control]="contactForm.get('email')!" [submitted]="submitted"></app-validation-error>
 
-                <input formControlName="subject" type="text" placeholder="Your Subject" />
-                <app-validation-error [control]="contactForm.get('subject')!"
-                    [submitted]="submitted"></app-validation-error>
+                <input formControlName="subject" id="subject" name="subject" type="text" placeholder="Your Subject" />
+                <app-validation-error [control]="contactForm.get('subject')!" [submitted]="submitted"></app-validation-error>
 
-                <textarea formControlName="message" rows="5" placeholder="Write your message here..."></textarea>
-                <app-validation-error [control]="contactForm.get('message')!"
-                    [submitted]="submitted"></app-validation-error>
+                <textarea formControlName="message" id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                <app-validation-error [control]="contactForm.get('message')!" [submitted]="submitted"></app-validation-error>
+
             </div>
-            <button type="submit" class="btn message-btn">Send Message</button>
+            <button type="submit" id="submit" name="submit" class="btn message-btn">Send Message</button>
         </form>
-
-        <!-- Contact Info Box -->
         <div class="contact-box">
             <h3>Contact Info</h3>
             <div class="contact-info">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <!-- Email -->
                 <div class="info-item email-hover">
                     <div class="icon-circle">
                         <i class="fas fa-envelope"></i>
@@ -49,8 +39,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Phone -->
                 <div class="info-item">
                     <div class="icon-circle">
                         <i class="fas fa-phone-alt"></i>
@@ -60,8 +48,6 @@
                         <span>+92-346-9888-608</span>
                     </div>
                 </div>
-
-                <!-- Address -->
                 <div class="info-item">
                     <div class="icon-circle">
                         <i class="fas fa-map-marker-alt"></i>
@@ -71,46 +57,35 @@
                         <span>E-11/2, Islamabad, Pakistan</span>
                     </div>
                 </div>
-
                 <div class="social-media-profile">
                     <h3>Visit my social profile and get connected</h3>
-
                     <div class="social-icons">
-                        <!-- LinkedIn -->
                         <div class="social-icon linkedin-profile">
                             <div class="icon-circle">
                                 <i class="fab fa-linkedin-in"></i>
-                            <span class="label">LinkedIn</span>
+                                <span class="label">LinkedIn</span>
                             </div>
                         </div>
-
-                        <!-- Twitter -->
                         <div class="social-icon twitter-profile">
                             <div class="icon-circle">
                                 <i class="fab fa-twitter"></i>
-                            <span class="label">Twitter</span>
+                                <span class="label">Twitter</span>
                             </div>
                         </div>
-
-                        <!-- Instagram -->
                         <div class="social-icon instagram-profile">
                             <div class="icon-circle">
                                 <i class="fab fa-instagram"></i>
-                            <span class="label">Instagram</span>
+                                <span class="label">Instagram</span>
                             </div>
                         </div>
-
-                        <!-- Facebook -->
                         <div class="social-icon facebook-profile">
                             <div class="icon-circle">
                                 <i class="fab fa-facebook-f"></i>
-                            <span class="label">Facebook</span>
+                                <span class="label">Facebook</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>

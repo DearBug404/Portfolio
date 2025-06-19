@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-reviews',
   standalone: true,
@@ -10,7 +9,6 @@ import { CommonModule } from '@angular/common';
 })
 export class Reviews implements OnInit {
   currentIndex = 0;
-
   reviewsList = [
     {
       text: "Excellent service and great communication! Truly professional experience from start to finish.Highly recommended for any web development project.",
@@ -37,47 +35,39 @@ export class Reviews implements OnInit {
       designation: "Founder"
     }
   ];
-
   ngOnInit() {
     this.updateSlidePosition();
     window.addEventListener('resize', () => {
       this.updateSlidePosition();
     });
   }
-
   get maxIndex() {
     return Math.max(this.reviewsList.length - 1, 0);
   }
-
   nextSlide() {
     if (this.currentIndex < this.maxIndex) {
       this.currentIndex++;
       this.updateSlidePosition();
     }
   }
-
   prevSlide() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.updateSlidePosition();
     }
   }
-
   updateSlidePosition() {
     const track = document.querySelector('.reviews-track') as HTMLElement;
     const card = document.querySelector('.review-block') as HTMLElement;
-
     if (track && card) {
-      const gap = 20; // Matches .reviews-track gap
+      const gap = 20; 
       const cardWidth = card.offsetWidth;
       const offset = this.currentIndex * (cardWidth + gap);
       track.style.transform = `translateX(-${offset}px)`;
     }
   }
-  
   onImageError(event: Event) {
   const target = event.target as HTMLImageElement;
-  target.src = 'assets/images/default-user.png'; // path to your default image
+  target.src = 'assets/images/default-user.png'; 
 }
-
 }
