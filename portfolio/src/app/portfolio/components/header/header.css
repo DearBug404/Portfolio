@@ -5,66 +5,131 @@
   position: relative;
 }
 
-/* HEADER MAIN STYLING */
 .header {
   width: 100%;
-  background-color: rgba(21, 27, 39, 0.4);
+  background-color: rgb(6, 6, 8);
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(5px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 80px;
 }
 
-/* LOGO */
+section {
+  scroll-margin-top: 200px;
+}
+
+section {
+  min-height: 100vh;
+  padding: 20px;
+  scroll-margin-top: 100px;
+}
+
 .logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 26px;
   color: #29bd5d;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.logo-img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
 }
 
-/* NAV LINKS */
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold; 
-  gap: 20px;
-  flex: 1; 
+  font-weight: bold;
+  gap: 30px;
+  flex: 1;
 }
 
-/* NAV LINKS ITEMS */
-.header a {
-  color: #29bd5d;
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  color: rgb(253, 254, 255);
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.header a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration: none;
+  color: rgb(253, 254, 255);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.header a:hover {
-  color: #0ff;
-  transform: scale(1.1);
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration: none;
+  color: rgb(253, 254, 255);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* PHONE NUMBER */
+.default-active {
+  color: #29bd5d !important;
+  transform: scale(1.1) !important;
+  font-weight: 600 !important;
+}
+
+.nav-link:hover {
+  color: #29bd5d;
+  transform: scale(1.1);
+  font-weight: 600;
+}
+
+.nav-link.default-active:hover {
+  color: #29bd5d !important;
+  transform: scale(1.1) !important;
+}
+
 .separator {
-  color: #ffffff;
+  color: rgb(253, 254, 255);
 }
+
 .number {
-  color: #0ff;
-  font-family: 'Poppins', sans-serif;
-}
-.number i {
-  margin-right: 6px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
   color: #29bd5d;
 }
 
-/* HAMBURGER ICON */
+.number i {
+  margin-right: 6px;
+  color: rgb(253, 254, 255);
+}
+
 .hamburger {
   display: none;
   font-size: 24px;
@@ -72,30 +137,45 @@
   cursor: pointer;
 }
 
-/* ---------- RESPONSIVE STYLING ---------- */
 @media (max-width: 768px) {
   .header {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    height: 40px; 
+    height: auto;
+  }
+  .logo-img {
+    height: 40px;
   }
 
   .nav-links {
     position: absolute;
-    top: 50px;
+    top: 80px;
     left: 0;
     width: 100%;
-    display: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.8s ease, opacity 0.6s ease, transform 0.6s ease;
     flex-direction: column;
-    background-color: rgba(21, 27, 39, 0.9);
-    border-radius: 10px;
-    padding: 10px 0;
+    align-items: flex-start;
+    background-color: rgb(6, 6, 8);
+    padding: 0 20px;
     z-index: 999;
+    gap: 10px;
+    border-top: 1px solid #4444441f;
+  }
+
+  .nav-link {
+    font-size: 12px !important;
+    padding: 2px 0;
   }
 
   .nav-links.show {
-    display: flex;
+    max-height: 180px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 30px 20px;
   }
 
   .hamburger {
@@ -103,4 +183,3 @@
     padding: 20px;
   }
 }
-

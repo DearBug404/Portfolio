@@ -1,21 +1,44 @@
 <div class="header">
-  <div class="logo">MyLogo</div>
-
+  <div class="logo">
+    <img src="assets/images/logo.png" (click)="goHome()" alt="My Logo" class="logo-img">
+  </div>
   <div class="hamburger" (click)="menuOpen = !menuOpen">
     {{ menuOpen ? '✖' : '☰' }}
   </div>
-
   <div class="nav-links" [ngClass]="{ 'show': menuOpen }">
-    <a href="#home">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#resume">RESUME</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#contact">CONTACT</a>
+    <a class="nav-link" [ngClass]="{
+         'default-active': hoveredTab === 'home' || (!hoveredTab && clickedTab === 'home')
+       }" (mouseenter)="setHoveredTab('home')" (mouseleave)="clearHoveredTab()"
+      (click)="setClickedTab('home'); scrollTo('home')">HOME</a>
+
+    <a class="nav-link" [ngClass]="{
+         'default-active': hoveredTab === 'about' || (!hoveredTab && clickedTab === 'about')
+       }" (mouseenter)="setHoveredTab('about')" (mouseleave)="clearHoveredTab()"
+      (click)="setClickedTab('about'); scrollTo('about')">ABOUT</a>
+      
+    <a class="nav-link" [ngClass]="{
+         'default-active': hoveredTab === 'services' || (!hoveredTab && clickedTab === 'services')
+       }" (mouseenter)="setHoveredTab('services')" (mouseleave)="clearHoveredTab()"
+      (click)="setClickedTab('services'); scrollTo('services')">SERVICES</a>
+
+      <a class="nav-link" [ngClass]="{
+         'default-active': hoveredTab === 'skills' || (!hoveredTab && clickedTab === 'skills')
+       }" (mouseenter)="setHoveredTab('skills')" (mouseleave)="clearHoveredTab()"
+      (click)="setClickedTab('skills'); scrollTo('skills')">SKILLS</a>
+
+    <a class="nav-link" [ngClass]="{
+         'default-active': hoveredTab === 'resume' || (!hoveredTab && clickedTab === 'resume')
+       }" (mouseenter)="setHoveredTab('resume')" (mouseleave)="clearHoveredTab()"
+      (click)="setClickedTab('resume'); scrollTo('resume')">RESUME</a>
+
+    <a class="nav-link" [ngClass]="{
+         'default-active': hoveredTab === 'contact' || (!hoveredTab && clickedTab === 'contact')
+       }" (mouseenter)="setHoveredTab('contact')" (mouseleave)="clearHoveredTab()"
+      (click)="setClickedTab('contact'); scrollTo('contact')">CONTACT</a>
 
     <ng-container *ngIf="!menuOpen">
-    <span class="separator">|</span>
-    <span class="number"><i class="fas fa-phone-alt fa-flip-horizontal"></i> +92 346 988608</span>
+      <span class="separator">|</span>
+      <span class="number"><i class="fas fa-phone-alt fa-flip-horizontal"></i> +92346 9888 608</span>
     </ng-container>
-    
   </div>
 </div>
